@@ -19,7 +19,7 @@ func NewRendezvous(memberStrategy MemberStrategy) *Rendezvous {
 	return &Rendezvous{fnv.New32a(), memberStrategy, make([][]byte, 0)}
 }
 
-// Get returns the node with the highest score for the given key. If this Hash
+// GetByRdv gets returns the node with the highest score for the given key. If this Hash
 // has no nodes, an empty string is returned.
 func (r *Rendezvous) GetByRdv(key string) string {
 
